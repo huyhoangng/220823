@@ -75,3 +75,7 @@ INSERT INTO OrderItems(OrderItemsID, OrderID, ProductID,Quatity, UnitPrice) VALU
 SELECT * FROM OrderItems
 SELECT * FROM Customers WHERE FirstName LIKE 'Hoang';
 SELECT * FROM Products WHERE Price BETWEEN $800 AND $1000;
+SELECT OrderDetails.*, Orders.* 
+FROM Orders
+INNER JOIN Orders ON OrdersID = Orders.OrdersID 
+WHERE Orders.CustomerOrderID = '2';
